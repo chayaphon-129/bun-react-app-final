@@ -1,0 +1,33 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw; /* ลดความกว้างลงเล็กน้อยให้มีระยะห่างจากขอบจอ */
+  max-width: 900px; /* จำกัดความกว้างสูงสุด */
+  height: 90vh; /* ลดความสูงเพื่อไม่ให้ยืดจนเกินไป */
+  background-color: #ffffff; /* สีพื้นหลังขาว */
+  padding: 20px; /* เพิ่มระยะห่างภายในให้มากขึ้น */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูสวยงาม */
+  border-radius: 8px; /* ทำขอบมน */
+}
+
+.crypto-select {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  font-size: 16px;
+  width: 200px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+canvas {
+  max-height: 80%; /* ให้กราฟขยายเต็มภายใน container */
+  width: 100%; /* กำหนดความกว้างเต็ม */
+}

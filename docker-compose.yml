@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: MY@ym2562
+      POSTGRES_DB: bitcoin_prices
+    ports:
+      - "5433:5433"  # Map port 5433 on the host to port 5432 in the container
+
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: db  # ต้องชัดเจนว่าใช้ชื่อ service
+      DB_PORT: 5433  # ใช้พอร์ตภายใน container
+      DB_USER: postgres
+      DB_PASSWORD: MY@ym2562
+      DB_NAME: bitcoin_prices
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
